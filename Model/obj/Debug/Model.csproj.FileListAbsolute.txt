@@ -1,0 +1,5 @@
+C:\Users\Елена\Desktop\Учёба\Курсы\Conv_Command_ToolKit\Model\bin\Debug\Model.dll
+C:\Users\Елена\Desktop\Учёба\Курсы\Conv_Command_ToolKit\Model\bin\Debug\Model.pdb
+C:\Users\Елена\Desktop\Учёба\Курсы\Conv_Command_ToolKit\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+C:\Users\Елена\Desktop\Учёба\Курсы\Conv_Command_ToolKit\Model\obj\Debug\Model.dll
+C:\Users\Елена\Desktop\Учёба\Курсы\Conv_Command_ToolKit\Model\obj\Debug\Model.pdb

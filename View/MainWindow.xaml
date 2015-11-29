@@ -1,0 +1,33 @@
+﻿<Window x:Class="View.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:View"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        xmlns:converters="clr-namespace:View.Converters"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Window.Resources>
+        <converters:MyBoolToVisibilityConverter x:Key="Converter" />
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+           <ColumnDefinition/>
+           <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <ListBox Grid.Column="0"
+                 ItemsSource="{Binding Employees}"
+                 SelectedItem="{Binding SelectedEmployee}"
+                 DisplayMemberPath="Name"/>
+        <StackPanel Grid.Column="1" Orientation="Vertical">
+            <xctk:DateTimePicker 
+                Value="{Binding SelectedEmployee.HireDate}"/>
+            <xctk:DateTimePicker
+                Visibility="{Binding SelectedEmployee.IsDeleted, Converter={StaticResource Converter}}"
+                Value="{Binding SelectedEmployee.FireDate}"/>
+            
+            <Button Content="Fire" Command="{Binding FireCommand}"/>
+        </StackPanel>
+    </Grid>
+</Window>
